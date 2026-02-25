@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="/myportfolio_web/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="my_portfolio">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <link rel="icon" type="image/png" href="appicon.png" />
+
+  <title>Naga Ajay Bathula</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script src="flutter.js" defer></script>
+</head>
+
+<body>
+  <script>
+    window.addEventListener('load', function (ev) {
+      // 1. Set the build configuration
+      window._flutter = window._flutter || {};
+      window._flutter.buildConfig = {
+        "engineRevision": "6c0baaebf70e0148f485f27d5616b3d3382da7bf",
+        "builds": [
+          {
+            "compileTarget": "dart2js",
+            "renderer": "canvaskit",
+            "mainJsPath": "main.dart.js"
+          }
+        ]
+      };
+
+      // 2. Initialize the loader
+      _flutter.loader.load({
+        serviceWorkerSettings: {
+          serviceWorkerVersion: "2008832521",
+        },
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(function (appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
